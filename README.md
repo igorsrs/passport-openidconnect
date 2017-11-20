@@ -1,4 +1,17 @@
 # Passport-OpenID Connect
+##with support to request data to authorization params
+
+Forked from [passport-openidconnect](https://github.com/jaredhanson/passport-openidconnect),
+adding support to use request data to authorizationParams.
+
+```
+strategy.authorizationParams = function(options, req) {
+...
+  params.foo = req.param.bar;
+...
+  return params;
+}
+```
 
 [Passport](https://github.com/jaredhanson/passport) strategy for authenticating
 with [OpenID Connect](http://openid.net/connect/).
